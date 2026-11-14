@@ -1,0 +1,45 @@
+{
+  "name": "n8n-hubspot-meeting-agenda-pre-brief-generator",
+  "version": "1.0.0",
+  "description": "Time-triggered pre-meeting intelligence for n8n and Node.js: finds meetings ~30 minutes out with external attendees, enriches them from HubSpot (contacts, companies, deals, notes, tickets), compiles an LLM executive brief with a deterministic fallback, and sends it to the assigned rep via Slack or email. DRY_RUN and SANDBOX_MODE are on by default.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test test/workflow.test.js",
+    "dry-run": "INTERNAL_DOMAINS=example.com node src/index.js --events test/fixtures/meeting-event-mock.json --now 2026-11-16T14:30:00Z",
+    "poll": "node src/index.js --poll",
+    "start": "node src/index.js --serve",
+    "build:workflow": "node scripts/build-workflow.js",
+    "check:workflow": "node scripts/build-workflow.js --check"
+  },
+  "engines": {
+    "node": ">=18.18"
+  },
+  "files": [
+    "src/",
+    "scripts/",
+    "workflow.json",
+    "README.md",
+    "DISCLAIMER.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "keywords": [
+    "n8n",
+    "hubspot",
+    "meeting-prep",
+    "pre-brief",
+    "llm",
+    "slack",
+    "block-kit",
+    "revops",
+    "sales-enablement"
+  ],
+  "author": "DH Robin <robin@dhrobinsystems.com> (https://dhrobinsystems.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhrobinsystems/n8n-hubspot-meeting-agenda-pre-brief-generator.git"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
