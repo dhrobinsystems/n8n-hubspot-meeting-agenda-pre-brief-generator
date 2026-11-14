@@ -66,6 +66,8 @@ The header facts (time, attendees, pipeline value, ticket count) are computed di
 
 ## Architecture
 
+![n8n Workflow Overview](assets/n8n-workflow-overview.png)
+
 ```mermaid
 flowchart TD
     A1["Schedule trigger<br/>every 5 minutes"] --> A2["Google Calendar<br/>events (next 4 h)"]
